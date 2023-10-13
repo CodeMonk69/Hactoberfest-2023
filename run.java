@@ -1,10 +1,6 @@
-import basic_programs.IronRodCalculation;
-import basic_programs.PalindromeGenerator;
-import basic_programs.PowerOfANumber;
-import basic_programs.MinMaxOfArray;
-import basic_programs.MergeSort;
+import devide_and_conquer.MatchingIndexElement;
+import devide_and_conquer.BinarySearch;
 import java.util.*;
-
 class run{
     static HashMap<Integer,String> selectionList;
     run() {
@@ -12,32 +8,19 @@ class run{
     }
 
     static void makeSelection() {
-        selectionList.put(1,"Find Power Of A Number");
-        selectionList.put(2,"Find Min/Max Of The Array");
-        selectionList.put(3,"Merge Sort");
-        selectionList.put(4,"Palindrome Generator");
-        selectionList.put(5,"Iron Rod Calculation");
+        selectionList.put(1,"Binary Search");
+        selectionList.put(2,"Matching Index Element");
     }
 
     static void loadFunction(int choice) {
         switch(choice) {
-            case 1 :
-                PowerOfANumber obj1 = new PowerOfANumber();
+            case 1 : 
+                BinarySearch obj1 = new BinarySearch();
                 obj1.main(new String[0]);
                 break;
             case 2 :
-                MinMaxOfArray obj2 = new MinMaxOfArray();
+                MatchingIndexElement obj2 = new MatchingIndexElement();
                 obj2.main(new String[0]);
-                break;
-            case 3 :
-                MergeSort obj3 = new MergeSort();
-                obj3.main(new String[0]);
-            case 4 :
-                PalindromeGenerator obj4 = new PalindromeGenerator();
-                obj4.main(new String[0]);
-            case 5 :
-                IronRodCalculation obj5 = new IronRodCalculation();
-                obj5.main(new String[0]);
         }
     }
 
@@ -63,15 +46,15 @@ class run{
     public static void main(String arg[]) {
         run obj = new run();
 
-        System.out.println("*** Basic Program List ***\n");
+        System.out.println("*** Divide And Conquer Program List ***\n");
         int choice=0;
         do {
-            loadFunction(choice);
-            System.out.println("___________________________\n");
-            showList();
-            System.out.println("\nEnter your choice : ");
-            choice = sc.nextInt();
+        loadFunction(choice);
+        System.out.println("___________________________\n"); 
+        showList();
+        System.out.println("\nEnter your choice : "); 
+        choice = sc.nextInt();
         } while (isValidChoice(choice));
-
+        
     }
 }
