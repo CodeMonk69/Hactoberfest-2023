@@ -3,7 +3,6 @@ package basic_programs;
 import java.util.*;
 import java.lang.*;
 
-/* Name of the class has to be "Main" only if the class is public. */
 public class MergeSort {
 
     static boolean isSmall(int start,int end)
@@ -56,7 +55,7 @@ public class MergeSort {
 
     static int[] mergeSort(int []arr,int start, int end)
     {
-        if (isSmall(start,end)) {//System.out.println("small= "+Arrays.toString(arr) + "start="+start+ "  end"+end);
+        if (isSmall(start,end)) {
             return solution(arr,start,end);
         } else {
             int mid=Divide(start,end);
