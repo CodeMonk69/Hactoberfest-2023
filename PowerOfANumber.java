@@ -50,12 +50,12 @@ public class PowerOfANumber {
     public static void main (String args[])
     {
         System.out.println("Welcome to power(a^n) calculator world \nEnter the value of a: ");
-        int a=sc.nextInt();
+        int base=sc.nextInt();
         System.out.println("Enter the value of n: ");
-        int n=sc.nextInt();
+        int exponent=sc.nextInt();
         
-        System.out.println("Power(a^n) using divide_and_conquer technique[ O(n) ]: "+DAC_Power(a,n)); //n
-        System.out.println("Power(a^n) using General power technique[ O(n) ]: "+power(a,n));   //n
-        System.out.println("Power(a^n) using effective_divide_and_conquer technique[ O(logn) ]: "+Eff_DAC_Power(a,n));  //logn
+        System.out.println("Power(a^n) using divide_and_conquer technique[ O(n) ]: "+DAC_Power(base,exponent)); //n
+        System.out.println("Power(a^n) using General power technique[ O(n) ]: "+power(base,exponent));   //n
+        System.out.println("Power(a^n) using effective_divide_and_conquer technique[ O(logn) ]: "+Eff_DAC_Power(base,exponent));  //logn
     }
 }
